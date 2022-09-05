@@ -25,16 +25,6 @@ namespace Full_GRASP_And_SOLID.Library
             this.steps.Remove(step);
         }
 
-        public double GetProductionCost()
-        {   
-            double resultado = 0;
-            foreach(Step step in this.steps)
-            {
-                resultado += step.Input.UnitCost + (step.Time*step.Equipment.HourlyCost);
-            }
-                return resultado;
-        }
-
         public void PrintRecipe()
         {
             Console.WriteLine($"Receta de {this.FinalProduct.Description}:");
